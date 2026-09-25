@@ -1,10 +1,9 @@
 import axios from "axios";
 
-// Automatically uses the Vercel environment variable in production,
-// and falls back to localhost when you are developing locally.
+// Using a clean fallback with the correct double slash
 const API_URL = import.meta.env.VITE_API_URL
   ? `${import.meta.env.VITE_API_URL}/api`
-  : "http://127.0.0.1:8000/api";
+  : "https://ashwamedh-gurukul-lms-3.onrender.com/api";
 
 export const api = axios.create({
   baseURL: API_URL,
